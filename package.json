@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:ui":"rm -rf build && cd ../../FullStackOpen/part2/phonebook && npm run build --prod && cp -r build ../../../FSOBackend/part3-exercise",
+    "build:ui": "rm -rf build && cd ../../FullStackOpen/part2/phonebook && npm run build --prod && cp -r build ../../../FSOBackend/part3-exercise",
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
     "deploy": "git push heroku main",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",    
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",
     "logs:prod": "heroku logs --tail"
   },
   "author": "",
@@ -17,6 +17,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "mongoose": "^5.13.7",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.12"
   }
