@@ -1,5 +1,9 @@
 const mongoose = require('mongoose');
 var uniqueValidator = require('mongoose-unique-validator');
+require('dotenv').config();
+
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
 
 const url = process.env.MONGODB_URI;
 console.log('connecting to', url);
